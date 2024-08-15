@@ -1,0 +1,17 @@
+;;<<Default Template>><<MATRIX>><<Default>>;;
+; Do not change filenames or add or remove FILEI/FILEO statements using an editor. Use Cube/Application Manager.
+RUN PGM=MATRIX PRNFILE="D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15MAT00A.PRN"
+FILEI MATI[2] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00A.MAT"
+FILEO MATO[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15MAT00B.MAT",
+MO=8-13, NAME=hw_time, hw_cost, pt_vehtime, pt_fare, pt_wt, pt_access
+FILEI MATI[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15HWY00A.MAT"
+
+
+
+mw[8]=mi.1.1
+mw[9]=mi.1.3
+mw[10]=mi.2.1
+mw[11]=mi.2.4
+mw[12]=mi.2.6
+mw[13]=mi.2.5
+ENDRUN

@@ -1,0 +1,34 @@
+;;<<Default Template>><<PUBLIC TRANSPORT>><<Default>>;;
+; Do not change filenames or add or remove FILEI/FILEO statements using an editor. Use Cube/Application Manager.
+RUN PGM=PUBLIC TRANSPORT PRNFILE="D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00C.PRN"
+FILEO REPORTO = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00D.PRN"
+FILEI FACTORI[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\Factor_pt.FAC"
+FILEI SYSTEMI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\PT_SYSTEM.PTS"
+FILEI FAREI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\FarePT.FAR"
+FILEO MATO[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00A.MAT",
+MO=1-7, NAME= 'IVTT_PT', 'IVTT_TUMTUM', 'IVTC_PT', 'IVTC_TUMTUM', 'OVDIST_PT', 'PT_WT', 'PT_ACCESS'
+FILEI ROUTEI[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00A.RTE"
+FILEI NETI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\cube Final Part 2\15PTR00A.NET"
+
+PARAMETERS FARE=T
+PARAMETERS TRANTIME =LW.TRANSITTIME
+
+PROCESS PHASE= LINKREAD
+
+LW.TRANSITTIME =LI.TIME
+ENDPROCESS
+
+PROCESS PHASE = SKIMIJ
+
+  MW[1]=TIMEA (0,TMODES) 
+  MW[2]=TIMEA (0,1)
+  MW[3]=FAREP(0,TMODES)
+  MW[4]=FAREP(0,1)
+  MW[5]=DIST(0,100)
+  MW[6]=IWAITA(0)
+  MW[7]=TIMEA(0,100)
+
+
+ENDPROCESS
+
+ENDRUN

@@ -1,0 +1,68 @@
+ 
+HIGHWAY (v.07/10/2023 [6.5.1 x64])  Wed Apr 03 15:54:32 2024
+
+FILEI NETI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\iitbnet.net"
+FILEO MATO[1] = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15HWY00A.MAT",
+ 
+MO=1-3, NAME=HWYTIME,DISTANCE,HWYCOST
+ZONES=11
+PROCESS PHASE=ILOOP
+ PATHLOAD PATH=LI.DISTANCE,
+ 
+ MW[1]=pathtrace(TIME),
+ MW[2]=pathtrace(li.DISTANCE),
+ MW[3]=3*pathtrace(li.DISTANCE)
+
+ MW[1][I] = 1000; Set Intrazonal time
+      MW[2][I] = 1000;Set Intrazonal Dist
+      MW[3][I] = 1000; Set Intrazonal Cost
+
+ENDPROCESS
+
+
+HIGHWAY Stack Size = 746 bytes.
+................................................................................
+
+
+NETI D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\iitbnet.net Opened
+NET PGM=CUBE   DATE=Wed Apr 03 15:54:25 2024
+ID=Internal Run
+PAR Zones=15      Nodes=1005      Links=1938      NodeRecs=917       
+NVR:   N  X  Y
+LVR:   A  B  ID  LINKTPYE  LANENUMBER  DISTANCE  SPEED  TIME  CAPACITY
+  LANES  LINKTYPE
+
+
+M(724): The NETI variables can not provide LinkClass directly, PHASE=LINKREAD is required.
+M(727):   1938 links for which default value for LinkClass was provided.
+M(727):   1938 links for which default value for T1 was provided.
+
+15HWY00A.MAT OpenedPage 2  (VOYAGER HIGHWAY) 
+
+--------------------------
+
+--------------------------------- Iteration 1 ----------------------------------
+
+
+Totals after Iteration 1 I loop:
+
+	MW[1]  : 11,456.61191   @J=I: 11,000      
+	MW[2]  : 11,122.29845   @J=I: 11,000      
+	MW[3]  : 11,366.89535   @J=I: 11,000      
+	MO.1.1 : 11,456.66   
+	MO.1.2 : 11,122.28   
+	MO.1.3 : 11,366.84   
+
+Variable Values at end of Iteration 1 I loop:
+
+	STORAGE:     12.84131
+
+Phase                    Seconds       Count
+---------     --------
+LinkInput                     --           1
+PathBlding                    --          11
+Tracing(untimed)              --         363
+Estm Processing               --           1
+
+HIGHWAY  ReturnCode = 0  Elapsed Time = 00:00:00
+################################################################################

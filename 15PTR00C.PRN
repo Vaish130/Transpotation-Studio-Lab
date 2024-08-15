@@ -1,0 +1,75 @@
+ 
+PUBLIC TRANSPORT (v.07/10/2023 [6.5.1 x64])  Thu Apr 04 18:16:03 2024
+
+FILEO REPORTO = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15PTR00D.PRN"
+FILEI FACTORI[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\Factor_pt.FAC"
+FILEI SYSTEMI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\PT_SYSTEM.PTS"
+FILEI FAREI = "D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\FarePT.FAR"
+FILEO MATO[1] = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15PTR00A.MAT",
+MO=1-7, NAME= 'IVTT_PT', 'IVTT_TUMTUM', 'IVTC_PT', 'IVTC_TUMTUM', 'OVDIST_PT', 'PT_WT', 'PT_ACCESS'
+FILEI ROUTEI[1] = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15PTR00A.RTE"
+FILEI NETI = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15PTR00A.NET"
+
+PARAMETERS FARE=T
+PARAMETERS TRANTIME =LW.TRANSITTIME
+
+PROCESS PHASE= LINKREAD
+
+LW.TRANSITTIME =LI.TIME
+ENDPROCESS
+
+PROCESS PHASE = SKIMIJ
+
+  MW[1]=TIMEA (0,TMODES)
+  MW[2]=TIMEA (0,1)
+  MW[3]=FAREP(0,TMODES)
+  MW[4]=FAREP(0,1)
+  MW[5]=DIST(0,100)
+  MW[6]=IWAITA(0)
+  MW[7]=TIMEA(0,100)
+
+
+ENDPROCESS
+
+
+PUBLIC TRANSPORT Stack Size = 1678 bytes.
+................................................................................
+Page 2  (VOYAGER PUBLIC TRANSPORT) 
+
+-----------------------------------
+
+D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\15PTR00A.NET
+NET:PGM=PUBLIC TRANSPORT (v.07/10/2023 [6.5.1 x64]) DATE=Thu Apr 04 18:15:54
+2024  
+PAR:Zones=15    Nodes=1005  Links=1938   NodeRecs=917   MapScale=0.00000    
+NVR:3 N X Y 
+LVR:11 A B ID LINKTPYE LANENUMBER DISTANCE SPEED TIME CAPACITY LANES LINKTYPE 
+
+C:\Program Files\Citilabs\CubeVoyager\PTprocesses.DLL 7/10/2023  23:58:46
+
+PUBLIC TRANSPORT (PTPROCESSES (v.07/10/2023 [6.5.1 x64])
+
+W(801): (RA) Wait Curve points between origin (0-0) and 1.0-0.5 have been ignored.
+
+W(801): (RA) Wait Curve points between origin (0-0) and 1.0-0.5 have been ignored.
+
+W(801): (RA) Wait Curve points between origin (0-0) and 1.0-0.5 have been ignored.
+
+M(800): (MI) Number of One Way Lines Input = 6.
+
+M(800): (MI) Number of Maximum Nodes in any Line = 59.
+
+M(800): (MI) Number of Direct Non-Transit Legs = 17.
+M(800): (MI) Number of Access Legs = 33.
+M(800): (MI) Number of Egress Legs = 33.
+M(800): (MI) Number of Transfer Legs = 60.
+M(800): (MI) Number of Walk Only Routes = 0.
+M(800): (MI) Number of Total Non-Transit Legs = 143.
+
+M(800): (MI) Number of Transit Legs = 152.
+
+CPU TIME: 00:00:00.04
+
+
+PUBLIC TRANSPORT ReturnCode = 1  Elapsed Time = 00:00:00
+################################################################################

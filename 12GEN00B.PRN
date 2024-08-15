@@ -1,0 +1,59 @@
+ 
+GENERATION (v.07/10/2023 [6.5.1 x64])  Mon Apr 01 23:03:50 2024
+
+
+FILEI ZDATI[1] = "D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\Taz_23m0549.dbf"
+FILEO PAO[1] = "D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\12GEN00B.DAT",
+LIST=Z P[1] A[1], DBF=T, NAMES=ID,PROD,ATTR
+ZONES=11
+
+PROCESS PHASE=ILOOP
+; This phase performs a zonal loop (I=1,Zones).  This phase is used to compute productions (P[#]=) and
+; attractions (A[#]=) by zone.  Up to 20 P's and 20 A's can be computed in a single run.
+  P[1]=0.8*POPULATION
+  A[1]=1.2*EMPLOYMENT
+
+
+ENDPROCESS
+
+
+PROCESS PHASE=ADJUST
+; This phase is optional and if used is processed only once after the completion of the ILOOP phase.
+; This phase is used to adjust and/or balance the final trip productions and attractions.
+    A[1]=P[1][0]/A[1][0]*A[1]
+
+
+ENDPROCESS
+
+
+GENERATION Stack Size = 704 bytes.
+................................................................................
+
+
+FILEI ZDATI=D:\2nd Semester M tech\Studio_Lab\Cube Final\Cube_Distribution_01-04-2024\Taz_23m0549.dbf Opened: 11 data records  3 Fields:
+ZONE(N)         POPULATION(N)   EMPLOYMENT(N)  
+
+
+Total P/A  1  13,240   4,074
+
+PHASE=ADJUST:
+
+Total P/A  1  13,240  13,240
+
+File D:\2ND SEMESTER M TECH\STUDIO_LAB\CUBE FINAL\CUBE_DISTRIBUTION_01-04-2024\12GEN00B.DAT openedPage 2  (VOYAGER GENERATION) 
+
+-----------------------------
+      1.00   2400.00    584.98
+      2.00   2800.00    974.96
+      3.00    600.00    292.49
+      4.00    400.00    194.99
+      5.00    160.00   5849.78
+      6.00    800.00    974.96
+      7.00   1280.00    779.97
+      8.00   1600.00   1559.94
+      9.00   2400.00   1949.93
+     10.00         0         0
+     11.00    800.00     78.00
+
+GENERATION ReturnCode = 0  Elapsed Time = 00:00:00
+################################################################################
